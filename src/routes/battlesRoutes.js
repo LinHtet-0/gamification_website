@@ -1,0 +1,28 @@
+// Name : Lin Htet
+// Admission Number: 2340304
+// Class : DIT/FT/1B/08
+// Ichat Email : LHHTET.23@ichat.sp.edu.sg
+
+////////////////////////////////////////////
+//Require 
+///////////////////////////////////////////
+const express = require('express');
+const battlesController = require('../controllers/battlesController');
+
+////////////////////////////////////////////
+//Express Router
+///////////////////////////////////////////
+const router = express.Router();
+
+
+////////////////////////////////////////////
+//API endpoints
+///////////////////////////////////////////
+router.get('/', battlesController.readAllBattles);//endpoint 01
+
+router.post('/', battlesController.checkExistingTeamBattleToCreate, battlesController.createNewBattleResults);//endpoint 02
+
+////////////////////////////////////////////
+//Export Routers
+///////////////////////////////////////////
+module.exports = router;

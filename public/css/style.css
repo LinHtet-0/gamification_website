@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+body
+{
+    font-family: "Poppins", sans-serif;
+    background-image: url("../images/cosmic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main
+{
+    min-height: calc(100vh - 56px - 56px);
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.form-control::placeholder{
+    font-size: 14px;
+    opacity: 0.8; 
+}
+
+.activeNavbar{
+    border-bottom: 2px solid #fff;
+}
+
+.button1{
+    background: rgba(255, 255, 255, 0.2)!important; /* Set background color with transparency */
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: 0.1s ease-in-out;
+}
+
+.button1:hover{
+    background: rgba(255, 255, 255, 0.2)!important; /* Set background color with transparency */
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    transform: scale(1.1);
+}
+
+.button2{
+    background: rgba(0, 0, 0, 0.54); /* Set background color with transparency */
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.button2:hover{
+    background: black; /* Set background color with transparency */
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+@keyframes animate {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px, 20px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#cosmo{
+    animation: animate 4s infinite ease-in-out;
+}
+
+
+.glassmorphism-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.userMessage {
+    background: rgba(0, 162, 255, 0.641);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.glassmorphism-container1 {
+    background: rgba(123, 91, 144, 0.451);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.glassmorphism-container2 {
+    background: rgba(144, 135, 91, 0.32);
+    border-radius: 5px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#registerButton{
+    text-decoration: none;
+}
+
+.card-title{
+    padding: 5px;
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0.256);
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+}
+
+.card-text{
+    margin-top: 10px;
+}
+
+.card-body{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    transition : 0.3 ease-in-out;
+}
+.card-hoverable:hover::before {
+    content: "Click to view profile";
+    position: absolute;
+    top: 0px;
+    right: -70px;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0.9;
+    visibility: visible;
+    z-index: 1;
+  }
+  
+.card-hoverable {
+    position: relative;
+    /* your existing styles for the card */
+    transition: transform 0.3s ease-in-out;
+}
+  
+.card-hoverable:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.profile-image{
+    text-decoration: none;
+    border-radius: 100px;
+    position: absolute;
+    top: -50px;
+    left: 145px;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.profile-image_for_message{
+    text-decoration: none;
+    border-radius: 100px;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+
+#playerList {
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 800px; /* Set a maximum height for the container if needed */
+}
+
+
+#playerList::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+}
+
+#playerList::-webkit-scrollbar-track {
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Set the background color of the scrollbar track */
+}
+
+#playerList::-webkit-scrollbar-thumb {
+    background-color:rgba(111, 19, 231, 0.533); /* Set the color of the scrollbar thumb */
+    border-radius: 5px; /* Set the border-radius of the scrollbar thumb */
+}
+
+.red-background {
+    background: rgba(77, 11, 232, 0.647);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.userProfile {
+    border-radius: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+.userChampion{
+    height: 120px;
+    width: 100px;
+}
+
+.userRankStatus{
+    height: 120px;
+    width: 120px;
+}
+
+.userTotalMatch{
+    height: 120px;
+    width: 150px;
+}
+
+.progress
+{
+    background-color: #7a7a7a6a;
+}
+
+/* #degree-table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-top : 30px;
+    margin-left : 65px;
+}
+
+#degree-table th, #degree-table td {
+    border: 1px solid rgb(164, 251, 13);
+    text-align: center;
+    padding: 20px;
+} */
+
+.challengesLogo{
+    height: 100px;
+    width: 250px;
+}
+
+.progressCard{
+    position : relative;
+    height: 240px;
+}
+
+.progressCardForTask{
+    position : relative;
+    height: 300px;
+}
+
+.progressButton{
+    position: absolute;
+    top: 150px;
+    left: 215px;
+}
+
+#progressCheck{
+    text-decoration: none;
+    background-color: rgba(111, 19, 231, 0.533);
+    border-color: rgba(255, 255, 255, 0.288);
+    transition: 0.3s ease-in-out;
+}
+
+#progressCheck:hover{
+    transform: scale(1.1);
+}
+
+#completeProgressMessage{
+    background-image:url("../images/successfulMessage.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    height : 200px;
+}
+
+
+.messageForm {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    z-index: 1000;
+    background: rgba(123, 91, 144, 0.451);
+    border-radius: 15px 15px 0 0;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+#messageList{
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.573);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.championCards{
+    height: 400px;
+    position: relative;
+    overflow : hidden;
+
+}
+
+#championDetails{
+    position: absolute;
+    text-decoration: none;
+    background-color: rgba(111, 19, 231, 0.533);
+    border-color: rgba(255, 255, 255, 0.288);
+    transition: 0.3s ease-in-out;
+    bottom : 10px;
+    right : 10px;
+}
+
+#championDetails:hover{
+    transform: scale(1.1);
+}
+
+.spell{
+    height: 50px;
+    width: 50px;
+}
+
+/* .spellCards{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+} */
+
+.playerSpell{
+    padding: 10px;
+}
+
+.winnerCard{
+    background: rgba(0, 255, 76, 0.378);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loserCard{
+    background: rgba(255, 0, 0, 0.247);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#battleList {
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 800px; /* Set a maximum height for the container if needed */
+}
+
+
+#battleList::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+}
+
+#battleList::-webkit-scrollbar-track {
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Set the background color of the scrollbar track */
+}
+
+#battleList::-webkit-scrollbar-thumb {
+    background-color:rgba(111, 19, 231, 0.533); /* Set the color of the scrollbar thumb */
+    border-radius: 5px; /* Set the border-radius of the scrollbar thumb */
+}
+
+#statisticContainer{
+    position: relative;
+}
+
+#postButton{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(153, 0, 255, 0.505);
+    border-radius: 15px;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    top: 100px;
+    right: 180px;
+    font-size: 30px;
+}
+
+.card-body-login-register{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.card-text-login-register{
+    margin : 0px;
+}

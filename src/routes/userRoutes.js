@@ -1,0 +1,32 @@
+// Name : Lin Htet
+// Admission Number: 2340304
+// Class : DIT/FT/1B/08
+// Ichat Email : LHHTET.23@ichat.sp.edu.sg
+
+//////////////////////////////////////////////////////
+// REQUIRE MODULES
+//////////////////////////////////////////////////////
+const express = require('express');
+const controller = require('../controllers/userController');
+
+//////////////////////////////////////////////////////
+// CREATE ROUTER
+//////////////////////////////////////////////////////
+const router = express.Router();
+
+//////////////////////////////////////////////////////
+// DEFINE ROUTES
+//////////////////////////////////////////////////////
+router.put('/:id', controller.updateUserById);
+router.delete('/:id', controller.deleteUserById);
+
+router.get('/:userId/player/:playerId', controller.readPlayerByUser);
+router.get('/:id', controller.readUserById);
+router.get('/', controller.readAllUser);
+
+// router.post('/', controller.createNewUser);
+
+//////////////////////////////////////////////////////
+// EXPORT ROUTER
+//////////////////////////////////////////////////////
+module.exports = router;

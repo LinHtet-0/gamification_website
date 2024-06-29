@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <title>Home</title>
+  <link rel="icon" type="image/x-icon" href="./images/game.png">
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/color.css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"> <img src="./images/logo.png" class="logo img-fluid"
+          style="width: 60px; height: 60px;" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- me-auto: margin-right: auto -->
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item ms-5 me-5">
+            <a class="nav-link activeNavbar" href="index.html">Home</a>
+          </li>
+          <li class="nav-item ms-5 me-5">
+            <a class="nav-link" href="ranking.html">Ranking</a>
+          </li>
+          <li class="nav-item ms-5 me-5">
+            <a class="nav-link" href="champion.html">Champions</a>
+          </li>
+          <li class="nav-item ms-5 me-5">
+            <a class="nav-link" href="progress.html">Progress Tracker</a>
+          </li>
+          <li class="nav-item ms-5 me-5">
+            <a class="nav-link" href="battleResult.html">Battle Results</a>
+          </li>
+          <li class="nav-item ms-5 me-5">
+            <a class="nav-link" href="message.html">Message</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="loginWarningModal" tabindex="-1" aria-labelledby="loginWarningModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginWarningModalLabel">Warning</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Please log in or register to access this page.
+        </div>
+        <div class="modal-footer">
+          <!-- Add buttons for login and register if needed -->
+          <a href="login.html"><button type="button" class="btn btn-dark">Log in</button></a>
+          <a href="register.html"><button type="button" class="btn btn-outline-dark">Register</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6 mt-5">
+          <p class="text-start" style="color: white; font-size: 100px; font-weight: bold;">Welcome to</p>
+          <p class="text-start" style="color: white; font-size: 60px; font-weight: bold;">Elementals</p>
+          <p class="text-start" style="color: white; font-size: 20px; margin-top: 50px;">Prepare for an epic adventure
+            filled with challenges, excitement, and endless possibilities. As you embark on this journey, forge
+            alliances, conquer foes, and become a legend in this immersive gaming universe. The fate of the game rests
+            in your hands, and we believe you have what it takes to emerge victorious. Let the games begin!</p>
+          <div class="button" style="margin-top: 100px;">
+            <a href="login.html"><button class="button1">Log in</button></a>
+            <a href="register.html"><button class="button2">Register</button></a>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 mt-5" id="cosmo">
+          <img src="./images/cosmo.png" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+
+          // Check if the link is the home page
+          const isHomeLink = link.getAttribute('href') === 'index.html';
+
+          if (!isHomeLink) {
+            // Check if the user is logged in (replace this with your actual check)
+            const userIsLoggedIn = false; // Set to true if the user is logged in
+
+            if (!userIsLoggedIn) {
+              // Show the login warning modal
+              $('#loginWarningModal').modal('show');
+            } else {
+              // User is logged in, navigate to the clicked page
+              window.location.href = link.getAttribute('href');
+            }
+          } else {
+            // Directly navigate to the home page
+            window.location.href = link.getAttribute('href');
+          }
+        });
+      });
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- ADD JAVASCRIPTS BEFORE BODY ENDTAG -->
+</body>
+
+</html>

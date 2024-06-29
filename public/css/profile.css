@@ -1,0 +1,6 @@
+body{
+    background-image: url("../images/profileBg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
